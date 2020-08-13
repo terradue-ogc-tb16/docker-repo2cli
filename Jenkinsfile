@@ -1,7 +1,7 @@
 def artserver = Artifactory.server('repository.terradue.com')
 def buildInfo = Artifactory.newBuildInfo()
 buildInfo.env.capture = true
-def dockerNewVersion = 0.1
+def dockerNewVersion = 0.2
 
 node('ci-community-docker') {
 
