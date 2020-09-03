@@ -39,6 +39,9 @@ RUN chmod 755 /tmp/install-miniforge.bash && /tmp/install-miniforge.bash
 
 ENV PATH=$NB_PYTHON_PREFIX/bin:$CONDA_DIR/bin:$PATH
 
+# for binder additional kernels
+RUN mkdir -p /usr/local/share/jupyter && chown -R $NB_USER:$NB_GID /usr/local/share/jupyter
+
 # clean-up
 RUN rm -f /tmp/install-*.bash && rm -f /tmp/environment.yml && rm -fr /tmp/templates
 
