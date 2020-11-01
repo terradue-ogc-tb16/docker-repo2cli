@@ -1,6 +1,7 @@
-FROM docker-co.terradue.com/da-tools:1.0
+FROM centos:7
 
 MAINTAINER Terradue S.r.l
+
 USER root
 
 # yum
